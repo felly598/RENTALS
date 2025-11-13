@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | Find a Home Rentals</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .signup-box {
+      background-color: #333;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.2);
+      width: 350px;
+      text-align: center;
+    }
+    h2 {
+      color: #ff4c4c;
+      margin-bottom: 20px;
+    }
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #ff4c4c;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #e63939;
+    }
+    .extra {
+      font-size: 0.9em;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-box">
+    <h2>Create Your Account</h2>
+    <p>Join Find a Home Rentals today</p>
+
+    <form onsubmit="return validateSignup()">
+      <input type="text" id="newUsername" placeholder="Enter Username"><br>
+      <input type="email" id="newEmail" placeholder="Enter Email"><br>
+      <input type="password" id="newPassword" placeholder="Enter Password"><br>
+      <input type="password" id="confirmPassword" placeholder="Confirm Password"><br>
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <div class="extra">
+      <p>Already have an account? 
+         <a href="index.html" style="color:#ff4c4c;">Login</a></p>
+    </div>
+  </div>
+
+  <script>
+    function validateSignup() {
+      const username = document.getElementById('newUsername').value.trim();
+      const email = document.getElementById('newEmail').value.trim();
+      const password = document.getElementById('newPassword').value.trim();
+      const confirm = document.getElementById('confirmPassword').value.trim();
+
+      if (!username || !email || !password || !confirm) {
+        alert("Please fill in all fields!");
+        return false;
+      }
+
+      if (password !== confirm) {
+        alert("Passwords do not match!");
+        return false;
+      }
+
+      alert("Account created successfully! Redirecting to login page...");
+      window.location.href = "index.html";
+      return false;
+    }
+  </script>
+</body>
+</html>

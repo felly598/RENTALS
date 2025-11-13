@@ -1,95 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Rentals Login </title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: grey;
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    .login-container {
-      background-color: white;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-      text-align: center;
-      width: 300px;
-    }
-
-    h2 {
-      color: red;
-      margin-bottom: 20px;
-    }
-
-    input[type="text"], input[type="password"] {
-      width: 90%;
-      padding: 10px;
-      margin: 10px 0;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-
-    input[type="submit"] {
-      background-color: red;
-      color: red;
-      padding: 10px;
-      width: 100%;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    input[type="submit"]:hover {
-      background-color: black;
-    }
-
-    p {
-      margin-top: 15px;
-      font-size: 14px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Home Rentals | Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+     <header>
+        <h1>Find a home Rentals</h1>
+        <p class="welcome-text">Welcome to find a home rentals — your trusted home for affordable and quality rentals!</p>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+           
+            <a href="#about-us">About Us</a>
+        </nav>
+    </header>
 
-  <div class="login-container">
-    <h2>Login</h2>
-    <form onsubmit="return validateLogin()">
-      <input type="text" id="username" placeholder="Enter Username" required><br>
-      <input type="password" id="password" placeholder="Enter Password" required><br>
+    <section class="gallery">
+        <div class="house">
+            <img src="Harare flats.jpg" alt="Harare Flats">
+            <h2>Harare Flats</h2>
+            <a href="harare-flats.html" class="btn">View Details</a>
+        </div>
 
-      <a href="index.html">
-  <input type="button" value="Login">
-</a>
+        <div class="house">
+            <img src="Imperial Tower.jpg" alt="imperial towers">
+            <h2>Imperial Towers</h2>
+            <a href="imperial-towers.html" class="btn">View Details</a>
+        </div>
 
-    </form>
-    <p>Welcome to Find a home rentals ✨🌹😀</p>
-  </div>
+        <div class="house">
+            <img src="Iris serenity.webp" alt="Iris Serenity">
+            <h2>Iris Serenity</h2>
+            <a href="iris-serenity.html" class="btn">View Details</a>
+        </div>
 
-  <script>
-    function validateLogin() {
-      // Simple validation — you can add more later
-      const username = document.getElementById('username').value;
-      const password = document.getElementById('password').value;
+        <div class="house">
+            <img src="blossom haven2.jpg" alt="Blossom Haven">
+            <h2>Blossom Haven</h2>
+            <a href="blossom haven.html" class="btn">View Details</a>
+        </div>
 
-      if (username && password) {
-        // Redirect to homepage
-        window.location.href = "index.html";
-        return false; // prevent form refresh
-      } else {
-        alert("Please enter both username and password!");
-        return false;
-      }
-    }
-  </script>
+        <div class="house">
+            <img src="prestige flats.jpg" alt="Prestige Lofts">
+            <h2>Prestige Lofts</h2>
+            <a href="prestige-lofts.html" class="btn">View Details</a>
+        </div>
+    </section>
 
+    <footer id="about-us">
+        <h2>About Us</h2>
+        <p>Reach us on:</p>
+        <ul>
+            <li>Instagram: @find a home rentals</li>
+            <li>WhatsApp: +254706326864</li>
+            <li>TikTok: @findahomerentals</li>
+            <li>Email: contact@fahrentals.co.ke</li>
+        </ul>
+        <p>&copy; 2025 Find a Home Rentals</p>
+    </footer>
 </body>
 </html>
